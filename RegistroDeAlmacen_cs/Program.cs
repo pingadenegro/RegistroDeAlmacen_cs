@@ -428,12 +428,12 @@ namespace SistemaAlmacen
                 }
                 else
                 {
-                    Console.WriteLine("N. Nombre | Total | Estado");
+                    Console.WriteLine($"{"Nro", -5} {"|Nombre", -21} {"|Total",-11} {"|Estado"}");
                     Console.WriteLine(linea2);
                     for (int i = 0; i < nombres.Count; i++)
                     {
                         decimal total = pedPrecios[i].Split(',').Sum(x => decimal.Parse(x, System.Globalization.CultureInfo.InvariantCulture));
-                        Console.WriteLine($"{i + 1}. {nombres[i]} | {total:F2} | Activo");
+                        Console.WriteLine($"{i + 1, -5} |{nombres[i], -20} |{total, -10:F2} |Activo");
                     }
                 }
                 Console.WriteLine(linea2);
@@ -484,12 +484,12 @@ namespace SistemaAlmacen
                     Pedidos();
                     return;
                 }
-                Console.WriteLine("N. Nombre | Total | Estado");
+                Console.WriteLine($"{"Nro",-5} {"|Nombre",-21} {"|Total",-11} {"|Estado"}");
                 Console.WriteLine(linea2);
                 for (int i = 0; i < nombres.Count; i++)
                 {
                     decimal total = pedPrecios[i].Split(',').Sum(x => decimal.Parse(x, System.Globalization.CultureInfo.InvariantCulture));
-                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1}. {nombres[i]} | {total:F2} | Activo\u001b[0m" : $"{i + 1}. {nombres[i]} | {total:F2} | Activo");
+                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo\u001b[0m" : $"{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo");
                 }
                 Console.WriteLine(linea2);
                 ConsoleKeyInfo tecla = Console.ReadKey(true);
@@ -553,12 +553,12 @@ namespace SistemaAlmacen
                     Pedidos();
                     return;
                 }
-                Console.WriteLine("N. Nombre | Total | Estado");
+                Console.WriteLine($"{"Nro",-5} {"|Nombre",-21} {"|Total",-11} {"|Estado"}");
                 Console.WriteLine(linea2);
                 for (int i = 0; i < nombres.Count; i++)
                 {
                     decimal total = pedPrecios[i].Split(',').Sum(x => decimal.Parse(x, System.Globalization.CultureInfo.InvariantCulture));
-                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1}. {nombres[i]} | {total:F2} | Activo\u001b[0m" : $"{i + 1}. {nombres[i]} | {total:F2} | Activo");
+                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo\u001b[0m" : $"{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo");
                 }
                 Console.WriteLine(linea2);
                 ConsoleKeyInfo tecla = Console.ReadKey(true);
@@ -606,12 +606,12 @@ namespace SistemaAlmacen
                     Pedidos();
                     return;
                 }
-                Console.WriteLine("N. Nombre | Total | Estado");
+                Console.WriteLine($"{"Nro",-5} {"|Nombre",-21} {"|Total",-11} {"|Estado"}");
                 Console.WriteLine(linea2);
                 for (int i = 0; i < nombres.Count; i++)
                 {
                     decimal total = pedPrecios[i].Split(',').Sum(x => decimal.Parse(x, System.Globalization.CultureInfo.InvariantCulture));
-                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1}. {nombres[i]} | {total:F2} | Activo\u001b[0m" : $"{i + 1}. {nombres[i]} | {total:F2} | Activo");
+                    Console.WriteLine(opcion == i ? $"\u001b[7m{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo\u001b[0m" : $"{i + 1,-5} |{nombres[i],-20} |{total,-10:F2} |Activo");
                 }
                 Console.WriteLine(linea2);
                 ConsoleKeyInfo tecla = Console.ReadKey(true);
